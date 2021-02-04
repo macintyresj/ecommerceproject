@@ -1,5 +1,20 @@
- h1{
+h1{
     color:#4c8f7a;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+.swal-modal {
+    background-color: #fafafa;
+    color:#4c8f7a;
+}
+
+.swal-button{
+    background-color: #4c8f7a;
+    color:#fafafa
 }

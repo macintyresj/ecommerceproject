@@ -8,8 +8,9 @@ function App() {
   return (
     <>
     <div className="App">
-      <NavbarComponent />
+      
       <header className="App-header">
+      <NavbarComponent />
       </header>
       <ItemListContainer greeting= {`Bienvenidos`} />
     </div>
