@@ -1,23 +1,34 @@
-import ItemCountComponent from '../ItemCount';
-import swal from "sweetalert";
+
+import React, {useState, useEffect} from 'react';
+
 import './stylescontainers.scss';
-
-
+import ItemListComponent from '../ItemList';
+import productList from '../../mocks/productList'; 
 
 const ItemListContainer = (props) => {
-    
-    const onAdd = () => {
-        swal("Producto agregado exitosamente");
-    }
+
+    const [products, setProducts] = useState ([]);
+
+    useEffect(() => {
+        const myPromise = new Promise((res, rej) => {
+            setTimeout(() => 
+            res(productList), 3000);
+            console.log(productList, products);
+            
+        });
+
+        myPromise.then((result) => {setProducts(result)});
+    }, []);
+
+
     return (
         <>
         <h1>{props.greeting}</h1>
-
-        <ItemCountComponent stock ={5} initial = {1}
-        onAdd = {onAdd} />
         
+        <ItemListComponent products = {products} />
+
         </>
     )
-}
+} 
 
 export default ItemListContainer;
