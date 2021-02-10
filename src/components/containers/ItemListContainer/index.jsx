@@ -1,9 +1,9 @@
 
 import React, {useState, useEffect} from 'react';
 
-import './stylescontainers.scss';
-import ItemListComponent from '../ItemList';
-import productList from '../../mocks/productList'; 
+import '../stylescontainers.scss';
+import ItemListComponent from '../../ItemList';
+import productList from '../../../mocks/productList'; 
 
 const ItemListContainer = (props) => {
 

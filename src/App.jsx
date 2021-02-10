@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import NavbarComponent from './components/navbar';
-import ItemListContainer from './components/containers';
+import ItemListContainer from './components/containers/ItemListContainer';
+import ItemDetailContainer from './components/containers/ItemDetailContainer';
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
       <NavbarComponent />
       </header>
       <ItemListContainer greeting= {`Bienvenidos`} />
+
+      <ItemDetailContainer />
     </div>
     </>
   );
