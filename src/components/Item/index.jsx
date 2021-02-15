@@ -1,6 +1,7 @@
 import './cardItemstyle.scss';
 import ItemCountComponent from '../ItemCount';
 import swal from "sweetalert";
+import { Link } from 'react-router-dom';
 
 const ItemComponent = ({product}) => {
     const onAdd = () => {
@@ -11,13 +12,15 @@ const ItemComponent = ({product}) => {
         
         <div className="cardItem">
             <h3>{product.name}</h3>
-            {/* <p>{product.detail}</p> */}
+            
             <b>${product.price}</b>
             <div>
             <ItemCountComponent stock ={product.inventary}
             initial = {1}
             onAdd = {onAdd} />
             </div>
+            <Link to={`/product/${product.id}`}><button>VER MAS</button></Link>
+
         </div>
         
     )

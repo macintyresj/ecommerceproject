@@ -12,8 +12,7 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         const myPromise = new Promise((res, rej) => {
             setTimeout(() => 
-            res(productList), 3000);
-            console.log(productList, products);
+            res(productList), 1000);
             
         });
 

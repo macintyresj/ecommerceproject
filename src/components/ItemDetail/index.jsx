@@ -5,16 +5,17 @@ import swal from "sweetalert";
 
 
 const ItemDetailComponent = ({ item }) => {
-    // console.log(item);
+    
+
     const onAdd = () => {
         swal("Producto agregado exitosamente");
     }
 
     return (
     <div className="cardDetail">
-        <div>
+        <div key={item.id}>
         <h3>{item.name}</h3>
-        <img src="item.img" alt="frascos de mermelada"/> <img/></div>
+        <img src={item.img} alt=""/> <img/></div>
         <div className="descripcion">
         <p>{item.detail}</p>
         <span>{item.price}</span>
