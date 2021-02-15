@@ -11,7 +11,7 @@ const ItemComponent = ({product}) => {
         
         <div className="cardItem">
             <h3>{product.name}</h3>
-            <p>{product.detail}</p>
+            {/* <p>{product.detail}</p> */}
             <b>${product.price}</b>
             <div>
             <ItemCountComponent stock ={product.inventary}
