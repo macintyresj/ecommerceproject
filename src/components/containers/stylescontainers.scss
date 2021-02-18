@@ -1,9 +1,14 @@
+
+
 h1{
     color:#4c8f7a;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
+.listadoProductos{
+    display: flex;
+    flex-flow: wrap;
+}
 
 .swal-overlay {
     background-color: rgba(0, 0, 0, 0.5);

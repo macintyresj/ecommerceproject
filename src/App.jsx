@@ -7,6 +7,7 @@ import { BrowserRouter, Switch, Route, Link} from 'react-router-dom'
 import MiCuenta from './components/MiCuenta';
 import Contacto from './components/Contacto';
 
+
 function App() {
   return (
     <>
@@ -18,7 +19,7 @@ function App() {
         <NavbarComponent />
           <Switch>
 
-            <Route exact path = '/' component= {ItemListContainer}>
+            <Route exact path = '/'>
               <ItemListContainer greeting= {`Bienvenidos`} />
             </Route>
             

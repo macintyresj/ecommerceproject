@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
         
         
         itemsPromise.then((resp) => {
-            let item = resp.find(prod => (id) => 
+            let item = resp.find(prod => 
             {return prod.id === id})
             setItem(item)
             

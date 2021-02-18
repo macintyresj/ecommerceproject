@@ -24,7 +24,7 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
             swal("Upps!", "Stock no disponible");
         }
     }
-
+    
     return (
         <>
         
