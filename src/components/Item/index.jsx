@@ -12,7 +12,7 @@ const ItemComponent = ({product}) => {
         
         <div className="cardItem">
             <h3>{product.name}</h3>
-            
+            <div><img width="100" src={product.img} alt=""/></div>
             <b>${product.price}</b>
             <div>
             <ItemCountComponent stock ={product.inventary}

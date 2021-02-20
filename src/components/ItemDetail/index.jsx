@@ -2,6 +2,7 @@ import {useState} from 'react';
 import './itemdetail.scss';
 import ItemCountComponent from '../ItemCount';
 import { Link } from 'react-router-dom';
+import cartComponent from '../Cart'
 // import swal from "sweetalert";
 
 
@@ -15,6 +16,7 @@ const ItemDetailComponent = ({ item }) => {
     }
 
 console.log(finCompra);
+
     
     return (
     <div className="cardDetail">
@@ -27,8 +29,8 @@ console.log(finCompra);
         <span>${item.price}</span>
         
         {finCompra ? <div>
-                        <button>FINALIZAR COMPRA</button>
-                        <button> <Link to="/">Seguir comprando</Link></button>
+                        <button><Link to="/Cart">FINALIZAR COMPRA</Link></button>
+                        <button> <Link to="/">SEGUIR COMPRANDO</Link></button>
                         </div>: 
                     <div>
                         <ItemCountComponent stock ={item.inventary}

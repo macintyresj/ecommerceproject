@@ -16,7 +16,7 @@ const ItemListContainer = (props) => {
             
         });
 
-        myPromise.then((result) => {setProducts(result)});
+        myPromise.then((result) => {setProducts(result)}); 
     }, []);
 
 
@@ -31,3 +31,37 @@ const ItemListContainer = (props) => {
 } 
 
 export default ItemListContainer;
+
+// import { useEffect, useState } from "react";
+// import productList from "../../mocks/productList";
+// import Item from "../Item";
+// import {useParams} from 'react-router-dom';
+
+
+
+
+// const ItemListComponent = () => {
+//     const {categoryId} = useParams();
+//     const [categoryList,setCategoryList] = useState([]);
+
+//     useEffect(() => {
+//         console.log (categoryId);
+
+//         let productos = productList.filter ((el) => {
+//             return el.category === categoryId
+//         });
+//         setCategoryList(productos);
+//     }, [categoryId])
+
+//     return(
+//     <div className="listadoProductos">
+//         <h3>{categoryId}</h3>
+//         {categoryList.map((product) => {
+//         return <Item key={product.id} product={product} />;
+
+//     })}
+//     </div>
+// );
+// };
+
+// export default ItemListComponent;
