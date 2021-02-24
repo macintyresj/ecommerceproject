@@ -8,6 +8,7 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
     // console.log(initial);
     
     const [contador, setContador] = useState(initial);
+    
 
     const onMinus = () => {
         if ( contador > 1) {
@@ -24,6 +25,9 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
             swal("Upps!", "Stock no disponible");
         }
     }
+    const handlerOnAdd = () => {
+        onAdd(contador)
+    } 
     
     return (
         <>
@@ -32,7 +36,7 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
         <span>{ contador } </span>
         <button onClick= { onPlus }>+</button>
         <div>
-        <button onClick = { onAdd }>COMPRAR</button>
+        <button onClick = { handlerOnAdd }>COMPRAR</button>
         </div>
         </>
         

@@ -25,8 +25,9 @@ const ItemDetailContainer = () => {
             {return prod.id === id})
             setItem(item)
             
+            
         });
-    }, []);
+    }, [id]);
 
     // console.log(item);
     return (

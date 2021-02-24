@@ -8,8 +8,7 @@ import MiCuenta from './components/MiCuenta';
 import Contacto from './components/Contacto';
 import ItemList from './components/ItemList';
 import Cart from './components/Cart';
-
-import CartContextComponent from './components/context/CartContext';
+import CartContextProvider from './components/context/CartContext';
 
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
       <header className="App-header">
 
       <BrowserRouter>
-      {/* <CartContextComponent> */}
+      <CartContextProvider>
         <NavbarComponent />
           <Switch>
 
@@ -40,7 +39,7 @@ function App() {
 
           </Switch>
 
-          {/* </CartContextComponent> */}
+        </CartContextProvider>
       </BrowserRouter>
       </header>
     </div>

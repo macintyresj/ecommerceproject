@@ -1,12 +1,12 @@
-// import React, { createContext, useContext } from 'react';
-// import CartContextComponent, {  } from '../../components/context/CartContext';
+import React, {  useContext } from 'react'
+import { CartContext }  from '../../components/context/CartContext'
 
 
-const cartComponent = () => {
+const CartComponent = () => {
     
-    // const CartContextUse = useContext (CartContextComponent)
+    const CartContextUse = useContext (CartContext)
 
-    // console.log(CartContextUse)
+    // console.log(CartContextUse);
 
 
     return (
@@ -15,4 +15,4 @@ const cartComponent = () => {
 }
 
 
-export default cartComponent;
+export default CartComponent;
