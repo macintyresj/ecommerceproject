@@ -1,28 +1,26 @@
-import {useState, useContext} from 'react';
+import {useState} from 'react';
 import './itemdetail.scss';
+import { useCartContext } from '../../components/context/CartContext';
 import ItemCountComponent from '../ItemCount';
 import { Link } from 'react-router-dom';
 // import LoadingComponent from '../Loading';
-import { CartContext } from '../../components/context/CartContext';
 // import swal from "sweetalert";
-
-
 
 const ItemDetailComponent = ({ item }) => {
 
     const [finCompra, setFinCompra] = useState(false)
 
-    const { addCart } = useContext (CartContext);
+    const { addCart } = useCartContext ();
 
-    const onAdd = (contador) => {
+    const handlerOnAdd = (event, quantity) => {
+        event.stopPropagation();
+
         setFinCompra(true);
-        addCart({item: item, quantity: contador})
+        addCart({item, cantidad: quantity,}, quantity)
     }
 
-// console.log(cart);
 
 
-    
     return (
     <div className="cardDetail">
         <div>
@@ -40,7 +38,7 @@ const ItemDetailComponent = ({ item }) => {
                     <div>
                         <ItemCountComponent stock ={item.inventary}
                         initial = {1}
-                        onAdd = {onAdd} />
+                        onAdd = {handlerOnAdd} />
                     </div>}
         </div>
         

@@ -4,8 +4,6 @@ import swal from "sweetalert";
 
 
 const ItemCountComponent = ({stock , initial , onAdd}) => {
-    // console.log(stock);
-    // console.log(initial);
     
     const [contador, setContador] = useState(initial);
     
@@ -25,9 +23,10 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
             swal("Upps!", "Stock no disponible");
         }
     }
-    const handlerOnAdd = () => {
-        onAdd(contador)
-    } 
+    
+    // const handlerOnAdd = () => {
+    //     onAdd(contador)
+    // } 
     
     return (
         <>
@@ -36,7 +35,7 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
         <span>{ contador } </span>
         <button onClick= { onPlus }>+</button>
         <div>
-        <button onClick = { handlerOnAdd }>COMPRAR</button>
+        <button onClick = {(event) => onAdd(event, contador)}>COMPRAR</button>
         </div>
         </>
         

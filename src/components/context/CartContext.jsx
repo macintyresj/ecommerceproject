@@ -1,63 +1,63 @@
-import React, { createContext, useState } from "react";
-
+import React, { createContext, useContext, useState } from "react";
 
 export const CartContext = createContext()
+export const useCartContext = () => useContext(CartContext);
 
-// console.log(CartContext);
+const CartContextProvider = ({children}) => {
 
-function CartContextProvider({children}) {
-    
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
+    const [itemQuantity, setItemQuantity] = useState(0);
+    const [total, setTotal] = useState(0);
 
-    const addCart = (item) => {
-        setCart(item);
+    const addCart = (item, quantity) => {
+        const isInCart = cart.findIndex(product => product.item.id === item.item.id);
         
-        // if (isInCart(item.item.id) === -1){
-        //     setCart(item)
-           
-        // } else{
-            
+        setItemQuantity(itemQuantity + parseInt(quantity));
+       
+        // console.log(itemQuantity);
+       
+        if(isInCart !== -1) {
+            const newCart = Array.from(cart);
+
+            cart[isInCart].cantidad += item.cantidad;
+            setCart(newCart); 
+        } else {
+            setCart([item, ...cart]);            
         }
- console.log(cart)
+        
+        setTotal(total + (item.item.price  * item.cantidad))
+    }
 
+    const removeItem = (id, quantity, price) => {
 
-        // const isInCart = cart.some(el => el.item.id === item.id);
+        const arrayAfterRemove = cart.filter(product => product.item.id !== id);
 
-        // if (isInCart) {
-        //     cart.forEach(el => { if (el.item.id === item.id) {
-        //         const newCart = cart.filter(el => el.item.id !== item.id);
-        //             setCart([
-        //                 ...newCart,
-        //                 {
-        //                     item: item,
-        //                     quantity: el.quantity + parseInt(contador),
-        //                 },
-        //             ]);
-        //         }
-        //     });
-        // } else {
-        //     setCart([...cart, { item: item, quantity: parseInt(contador) }]);
-        // }
+        setCart(arrayAfterRemove);
+        setItemQuantity(itemQuantity - quantity);
+        setTotal(total - price);
 
-    // }
+    }
+
+    const clearCart = () => {
+        setCart([]);
+        setItemQuantity(0);
+        setTotal(0)
+    }
     
-    // const isInCart= (id) =>{
-    //     return cart.findIndex(prod => prod.id === id);
-    // }
+console.log(cart);
+    return (
+        <CartContext.Provider value={{
+            cart,
+            itemQuantity, 
+            addCart,
+            removeItem, 
+            clearCart,
+            total
+            }}>
+            {children}
+        </CartContext.Provider>
+    )
+    }
 
-
-
-return(
-    <CartContext.Provider value= {{
-        cart,
-        addCart
-    }}>
-        {children}
-
-    </CartContext.Provider>
-
-)
-
-}
 
 export default CartContextProvider;
