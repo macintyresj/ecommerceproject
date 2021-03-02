@@ -9,9 +9,9 @@ const NavbarComponent =  () => {
         <nav>
             <ul className='navlist--1'>
                 <li><NavLink to="/"> MARCA</NavLink></li>
-                <li><NavLink to={`/ItemList/${'frascos'}`}> Frascos</NavLink></li>
-                <li><NavLink to="/ItemList/cajas"> Cajas</NavLink></li>
-                <li><NavLink to="/ItemList/botellas"> Botellas</NavLink></li>
+                <li><NavLink to={`/ItemList/${'ps4'}`}> PS4</NavLink></li>
+                <li><NavLink to="/ItemList/switch"> SWITCH</NavLink></li>
+                <li><NavLink to="/ItemList/funkopop"> FunkoPop</NavLink></li>
             </ul>
             <ul className='navlist--2'>
                 <li><NavLink to="/Contacto"> Contacto </NavLink></li>
@@ -19,7 +19,7 @@ const NavbarComponent =  () => {
             </ul>
             <CartWidgetComponent />
         </nav>
-        </>
+        </> 
     );
 }
 

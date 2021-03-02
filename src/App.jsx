@@ -3,7 +3,7 @@ import './App.css';
 import NavbarComponent from './components/navbar';
 import ItemListContainer from './components/containers/ItemListContainer';
 import ItemDetailContainer from './components/containers/ItemDetailContainer';
-import { BrowserRouter, Switch, Route, Link} from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 import MiCuenta from './components/MiCuenta';
 import Contacto from './components/Contacto';
 import ItemList from './components/ItemList';
