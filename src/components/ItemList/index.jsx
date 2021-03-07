@@ -2,21 +2,24 @@ import React from 'react';
 import Item from '../Item';
 
 
-const ItemListComponent = ({products}) => {
+const ItemListComponent = ({items}) => {
 
     return (
         <>
         
-        <div>
-            { products.length > 0
-            ?  products.map(item=>{
+        <div className="listBox">
+            { items.length > 0
+            ?  items.map(item=>{
                 return (
-                    <div > 
-                    <Item key={item.category} id={item.id} title={item.data.title} price={item.data.price}/>
+                    <div className="list"> 
+                    <Item key={item.categoria}
+                     id={item.id} 
+                     title={item.data.title} 
+                     price={item.data.price}/>
                     </div>
                 )
             })
-            : <p>Buscando Productos..</p>}
+            : <p>Loading...</p>}
         </div>
         </>
     )

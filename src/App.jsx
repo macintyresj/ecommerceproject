@@ -6,10 +6,12 @@ import ItemDetailContainer from './components/containers/ItemDetailContainer';
 import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 import MiCuenta from './components/MiCuenta';
 import Contacto from './components/Contacto';
-import ItemList from './components/ItemList';
 import Cart from './components/Cart';
 import CartContextProvider from './components/context/CartContext';
-
+import CheckoutComponent from './components/Checkout';
+import PS4 from './components/Productos/PS4';
+import NSwitch from './components/Productos/NSwitch';
+import FunkoPop from './components/Productos/FunkoPop';
 
 function App() {
   return (
@@ -24,17 +26,22 @@ function App() {
           <Switch>
 
             <Route exact path = '/'>
-              <ItemListContainer greeting= {`Bienvenidos`} />
+              <ItemListContainer />
             </Route>
 
             
-            <Route exact path = '/product/:id' >
+            <Route exact path = '/item/:id' >
               <ItemDetailContainer />
             </Route>
-            <Route exact path = '/ItemList/:categoryId'><ItemList/></Route>
+            <Route exact path = '/PS4'><PS4/></Route>
+            <Route exact path = '/NSwitch'><NSwitch/></Route> 
+            <Route exact path = '/FunkoPop'><FunkoPop/></Route>
             <Route exact path = '/MiCuenta'><MiCuenta/></Route>
             <Route exact path = '/Contacto'><Contacto/></Route>
             <Route exact path = '/Cart'><Cart/></Route>
+            <Route path="/Checkout">
+            <CheckoutComponent />
+        </Route>
 
 
           </Switch>

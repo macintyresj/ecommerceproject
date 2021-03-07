@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './stylescontainers.scss';
 import ItemDetailComponent from '../ItemDetail';
-// import productList from '../../mocks/productList'; 
 import { useParams } from 'react-router-dom';
 import { getFirestore} from '../firebase';
 
@@ -23,11 +22,14 @@ const ItemDetailContainer = () => {
             .catch((error) => {
                 console.log(error)
             })
-        }, []);
+        }, [id]);
             
     return (
     <>
-    <ItemDetailComponent item={item} />
+    <div>
+    {item  ?
+    <ItemDetailComponent item= {item} /> : <p>Loading... </p>}
+    </div>
     </>
     );
 };

@@ -1,7 +1,7 @@
 import CartWidgetComponent from '../cartwidget';
 import './navstyles.scss';
 import { NavLink } from 'react-router-dom';
-
+import { useCartContext} from '../context/CartContext';
 
 const NavbarComponent =  () => {
     return (
@@ -9,9 +9,9 @@ const NavbarComponent =  () => {
         <nav>
             <ul className='navlist--1'>
                 <li><NavLink to="/"> MARCA</NavLink></li>
-                <li><NavLink to={`/ItemList/${'ps4'}`}> PS4</NavLink></li>
-                <li><NavLink to="/ItemList/switch"> SWITCH</NavLink></li>
-                <li><NavLink to="/ItemList/funkopop"> FunkoPop</NavLink></li>
+                <li><NavLink to={`/PS4`}> PS4</NavLink></li>
+                <li><NavLink to="/NSwitch"> SWITCH</NavLink></li>
+                <li><NavLink to="/FunkoPop"> FunkoPop</NavLink></li>
             </ul>
             <ul className='navlist--2'>
                 <li><NavLink to="/Contacto"> Contacto </NavLink></li>

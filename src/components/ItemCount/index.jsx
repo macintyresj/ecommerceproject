@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import swal from "sweetalert";
 
 
+
 const ItemCountComponent = ({stock , initial , onAdd}) => {
     
     const [contador, setContador] = useState(initial);
@@ -29,15 +30,17 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
     // } 
     
     return (
-        <>
-        
-        <button onClick = { onMinus }>-</button>
-        <span>{ contador } </span>
-        <button onClick= { onPlus }>+</button>
-        <div>
-        <button onClick = {(event) => onAdd(event, contador)}>COMPRAR</button>
+
+        <div className="product">
+
+            <button onClick = { onMinus }>-</button>
+            <span>{ contador } </span>
+            <button onClick= { onPlus }>+</button>
+            <div>
+            <button onClick = {(event) => onAdd(event, contador)}>COMPRAR</button>
         </div>
-        </>
+        </div>
+
         
         );
 };

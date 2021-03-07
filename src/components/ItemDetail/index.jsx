@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import './itemdetail.scss';
-import { useCartContext } from '../../components/context/CartContext';
+import { useCartContext } from '../context/CartContext';
 import ItemCountComponent from '../ItemCount';
 import { Link } from 'react-router-dom';
 // import LoadingComponent from '../Loading';
@@ -36,7 +36,7 @@ const ItemDetailComponent = ({ item }) => {
                         <button> <Link to="/">SEGUIR COMPRANDO</Link></button>
                         </div>: 
                     <div>
-                        <ItemCountComponent stock ={item.inventary}
+                        <ItemCountComponent stock ={item.stock}
                         initial = {1}
                         onAdd = {handlerOnAdd} />
                     </div>}
