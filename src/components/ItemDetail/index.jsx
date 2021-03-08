@@ -25,10 +25,10 @@ const ItemDetailComponent = ({ item }) => {
     <div className="cardDetail">
         <div>
             
-        <h3>{item.name}</h3>
+        <h3>{item.title}</h3>
         <img src={item.img} alt=""/> <img/></div>
         <div className="descripcion">
-        <p>{item.detail}</p>
+        <p>{item.description}</p>
         <span>${item.price}</span>
         
         {finCompra ? <div>

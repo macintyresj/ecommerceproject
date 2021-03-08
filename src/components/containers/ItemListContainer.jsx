@@ -43,7 +43,7 @@ const ItemListContainer = ({category= null}) => {
                     console.log(err)
                 })
         } else {
-            baseDeDatos.collection("Items").where('category', '==', category)
+            baseDeDatos.collection("ITEM").where('category', '==', category)
                 .get()
                 .then(docs => {
                     let arr = [];
