@@ -22,18 +22,18 @@ const ItemDetailComponent = ({ item }) => {
 
 
     return (
-    <div className="cardDetail">
-        <div>
+    <div className="itemDetail">
+        <div className="itemDetails">
             
         <h3>{item.title}</h3>
-        <img src={item.img} alt=""/> <img/></div>
-        <div className="descripcion">
+        <img src={item.img} alt="" className="itemDetail__img"/> <img/></div>
+        <div className="texto">
         <p>{item.description}</p>
-        <span>${item.price}</span>
+        <span className="itemDetail__precio">${item.price}</span>
         
-        {finCompra ? <div>
+        {finCompra ? <div className="comprar">
                         <button><Link to="/Cart">FINALIZAR COMPRA</Link></button>
-                        <button> <Link to="/">SEGUIR COMPRANDO</Link></button>
+                        <button><Link to="/">SEGUIR COMPRANDO</Link></button>
                         </div>: 
                     <div>
                         <ItemCountComponent stock ={item.stock}
@@ -41,9 +41,9 @@ const ItemDetailComponent = ({ item }) => {
                         onAdd = {handlerOnAdd} />
                     </div>}
         </div>
+        </div>
         
-        
-    </div>
+    
     );
 };
 

@@ -5,27 +5,31 @@ import {Link} from 'react-router-dom';
 
 const CartWidgetComponent = () =>{
 
-    const { cart, itemQuantity, removeItem } = useCartContext();
+    const { cart, itemQuantity, removeItem, total } = useCartContext();
     const [showCart, setShowCart] = useState(false);
 
     return (
         <div>
-        <p><i className="fas fa-shopping-cart" onClick={() => setShowCart(true)}></i>{itemQuantity}</p>
+        <p className="fas fa-shopping-cart"onClick={() => setShowCart(true)}><i ></i>{itemQuantity}</p>
             {
                 showCart &&
-                <div >
+                <div className="openCart">
                     {cart.map((product, index) => {
                         return (
-                            <div key={index}>
-                                <p><strong>{product.item.title}</strong></p>
-                                <p>Cantidad: {product.cantidad}</p>
+                            <div key={index} className="cartDetail">
+                                <p><strong>{`${product.cantidad}  
+                                ${product.item.title}`}</strong></p>
+    
+                            
                                 <p>Precio: {product.item.price}</p>
                                 <p>Total: {product.item.price * product.cantidad}</p>
-                                <button onClick={() => removeItem(product.item.id, product.cantidad, product.item.price * product.cantidad)}>X</button>
-                                <button onClick={() => setShowCart(false)} ><Link to="/checkout" className="checkoutCart">Finalizar compra</Link></button>
+                                <button onClick={() => removeItem(product.item.id, product.cantidad, product.item.price * product.cantidad)}>Quitar del carrito</button>
+                                
                             </div>
                         )
                     })}
+                    <p><strong>Total: ${total}</strong></p>
+                    <button onClick={() => setShowCart(false)} ><Link to="/checkout" className="checkoutCart">Finalizar compra</Link></button>
                     <button onClick={() => setShowCart(false)}>Cerrar</button>
                 </div>
             }

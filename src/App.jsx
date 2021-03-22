@@ -1,10 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import NavbarComponent from './components/navbar';
 import ItemListContainer from './components/containers/ItemListContainer';
 import ItemDetailContainer from './components/containers/ItemDetailContainer';
-import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
-import MiCuenta from './components/MiCuenta';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import Contacto from './components/Contacto';
 import Cart from './components/Cart';
 import CartContextProvider from './components/context/CartContext';
@@ -12,6 +10,7 @@ import CheckoutComponent from './components/Checkout';
 import PS4 from './components/Productos/PS4';
 import NSwitch from './components/Productos/NSwitch';
 import FunkoPop from './components/Productos/FunkoPop';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -36,7 +35,6 @@ function App() {
             <Route exact path = '/PS4'><PS4/></Route>
             <Route exact path = '/NSwitch'><NSwitch/></Route> 
             <Route exact path = '/FunkoPop'><FunkoPop/></Route>
-            <Route exact path = '/MiCuenta'><MiCuenta/></Route>
             <Route exact path = '/Contacto'><Contacto/></Route>
             <Route exact path = '/Cart'><Cart/></Route>
             <Route path="/Checkout">
@@ -45,6 +43,7 @@ function App() {
 
 
           </Switch>
+          <Footer />
 
         </CartContextProvider>
       </BrowserRouter>

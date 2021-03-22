@@ -1,0 +1,22 @@
+.itemList{
+    border: 1px solid #001eff;
+    box-shadow: 7px 1px 10px #001eff3a;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.itemList img{
+    height: 150px;
+}
+
+
+.bloque{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

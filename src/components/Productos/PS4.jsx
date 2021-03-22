@@ -6,7 +6,7 @@ const PS4 = () => {
     return (
         <div>
             <h1>PS4</h1>
-            <ItemListContainer category="PS4" />
+            <ItemListContainer category="VdeIJOKUQS6dZJxedTfy"/>
 
         </div>
     )

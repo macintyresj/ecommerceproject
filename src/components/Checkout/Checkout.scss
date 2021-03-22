@@ -1,0 +1,47 @@
+$color1:rgb(12,1, 39);
+$color2:rgb(2,2,2);
+$color3:rgb(253, 253, 255);
+$color4: #e9e6e0;
+
+.orderContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.formCheckout{
+    margin: 10px;
+    width: 500px;
+    font-size: 20px;
+}
+
+.formCheckout input{
+    width: 100%;
+    height: 30px;
+    border:none;
+    border-radius:15px;
+}
+
+.formCheckout input:active{
+    background-color: $color1 ;
+}
+
+.formCheckout button{
+    color: $color2;
+    background-color: $color4;
+    padding: 14px 25px;
+    border: none;
+    margin: 10px auto;
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+    border-radius: 20px;
+}
+
+.order{
+    text-align: center;
+    margin: 50px;
+    height: 700px;
+}
+

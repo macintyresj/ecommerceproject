@@ -6,7 +6,7 @@ const FunkoPop = () => {
     return (
         <div>
             <h1>FunkoPop</h1>
-            <ItemListContainer category="FunkoPop" />
+            <ItemListContainer category="SA6R2ffDSO6OXyw3UwIl" />
 
         </div>
     )

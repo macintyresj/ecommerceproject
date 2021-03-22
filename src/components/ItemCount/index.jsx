@@ -25,19 +25,16 @@ const ItemCountComponent = ({stock , initial , onAdd}) => {
         }
     }
     
-    // const handlerOnAdd = () => {
-    //     onAdd(contador)
-    // } 
     
     return (
 
         <div className="product">
 
-            <button onClick = { onMinus }>-</button>
+            <button onClick = { onMinus } >-</button>
             <span>{ contador } </span>
             <button onClick= { onPlus }>+</button>
             <div>
-            <button onClick = {(event) => onAdd(event, contador)}>COMPRAR</button>
+            <button onClick = {(event) => onAdd(event, contador)} className="addButton">COMPRAR</button>
         </div>
         </div>
 

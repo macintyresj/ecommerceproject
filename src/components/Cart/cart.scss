@@ -1,31 +1,43 @@
-.cartDetail{
-    border: 2px solid #fdba31;
-    box-shadow: 2px 2px 2px 1px #37007536;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
+$color1:rgb(12, 1, 39);
+$color2:rgb(2,2,2);
+$color3:rgb(253, 253, 255);
+
+.cartDetalle{
+    display: flex;
+    padding: 3%;
     text-align: center;
+
+    p{
+        padding: 1rem;
+        margin-right: 2rem;
+    }
 }
 
-.cartDetail button{
-    width: 200px;
-    color: #370075;
-    background-color: #fdba31;
+.cartDetalle button{
+    width: 40px;
+    height: 40px;
+    color: $color1;
     border: none;
-    padding: 5px;
-    margin: 14px auto;
+    margin:auto ;
     font-weight: 600;
     font-size: 20px;
+    border-radius: 50px;
+}
+.cartDetalle button:hover{
+    background-color: #001eff4d;
+    font-size: 0.8rem;
+    border: #001eff;
 }
 
-.carrito{
+.cart{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    min-height: 700px;
 }
 
-.carrito h1{
+.cart h1{
     text-align: center;
 }
 
@@ -35,8 +47,7 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    color: #370075;
-    background-color: #fdba31;
+    color: $color1;
     border: none;
     margin-bottom: 20px;
     font-weight: 600;
@@ -44,42 +55,51 @@
     border-radius: 20px;
 }
 
-.carritoContenedor{
+.cartContainer{
     text-align: center;
     display: flex;
+    flex-direction: column;
     width: 80%;
     justify-content: space-evenly;
+    background-color: $color3;
 }
 
 .carritoVacioMensaje{
     font-size: 30px;
-    margin: 20px;
+    margin: 2rem;
+    padding: 1rem;
 }
 
 .carritoVacioBoton{
     display: block;
-    color: #370075;
-    background-color: #fdba31;
+    color: $color2;
     border: none;
     margin: 10px auto;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     text-decoration: none;
     text-align: center;
     padding: 10px;
     border-radius: 20px;
+    background-color: $color3
 }
-
-.carrito_final{
+.carritoVacioBoton:hover{
+    border:#001eff;
+    text-shadow: 2px 2px 5px #001eff27
+}
+.total p{
+    text-align: right;
+    margin-right: 2rem;
+}
+.checkoutCart{
     display: flex;
     width: 200px;
     justify-content: center;
     height: 50px;
     align-items: center;
-    color: #370075;
-    background-color: #fdba31;
+    color: $color2;
     border: none;
-    margin: 10px auto;
+    background-color: #efefef;
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
@@ -87,7 +107,8 @@
     border-radius: 20px; 
 }
 
-.total__botones{
+.buttons{
+    display: flex;
     margin: 10px;
     font-size: 20px;
 }

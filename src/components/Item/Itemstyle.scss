@@ -1,0 +1,39 @@
+$color1:rgb(12, 1, 39);
+$color2:rgb(2,2,2);
+$color3:rgb(253, 253, 255);
+$color4: #e9e6e0;
+
+.itemDetalle a{
+    color: $color1;
+    text-decoration: none;
+    vertical-align: sub;
+    text-transform: uppercase;
+}
+.itemDetalle:hover{
+    color: $color4;
+    background-color: #001eff4f;
+    border: #001eff;
+}
+.itemDetalle{
+    margin-top: 15px;
+    border: none;
+    border-radius: 40px;
+    height: 40px;
+    background-color: $color4;
+
+}
+
+.price{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 20px;
+}
+
+hr{
+    height: 2px;
+    border: 0px solid #001eff;
+    background-color: #001eff;
+    color: #001eff;
+    margin: 10px;
+}
+

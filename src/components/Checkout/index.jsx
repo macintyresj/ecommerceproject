@@ -3,6 +3,7 @@ import { getFirestore } from '../firebase/';
 import {useCartContext} from '../context/CartContext';
 import firebase from "firebase/app";
 import "firebase/firestore";
+import './Checkout.scss';
 
 const CheckoutComponent = () => {
     const { total } = useCartContext()
