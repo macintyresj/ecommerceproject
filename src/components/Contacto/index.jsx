@@ -4,7 +4,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import './contacto.scss';
 
-
+//En base al form del checkout hice un formulario de contacto que también genera en firebase un nuevo documento con valores que complete el usuario
 const Contacto = () => {
     const [nombre, setNombre] = useState("")
     const [telefono, setTelefono] = useState("")

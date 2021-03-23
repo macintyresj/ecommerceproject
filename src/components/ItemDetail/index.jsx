@@ -3,8 +3,7 @@ import './itemdetail.scss';
 import { useCartContext } from '../context/CartContext';
 import ItemCountComponent from '../ItemCount';
 import { Link } from 'react-router-dom';
-// import LoadingComponent from '../Loading';
-// import swal from "sweetalert";
+
 
 const ItemDetailComponent = ({ item }) => {
 

@@ -4,6 +4,9 @@ import ItemListComponent from '../ItemList';
 import { getFirestore } from '../firebase';
 
 
+/*Acá tuve problemas con el código que habíamos visto en clase me dejó de funcionar cuando creé otra colección => probé 
+con lo de la ppt y recomendaciones deñ tutor, cuando logré que funcione no quise cambiarlo, entiendo que no es tan eficiente, pero anda*/ 
+
 const ItemListContainer = ({category= null}) => {
 
     let [items, setItems] = useState ([]);
@@ -46,7 +49,6 @@ const ItemListContainer = ({category= null}) => {
 
     return (
         <>
-        {/* <h1>{props.greeting}</h1> */}
         
         <ItemListComponent items = {items} />
 

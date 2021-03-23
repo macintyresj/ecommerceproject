@@ -5,3 +5,5 @@ const LoadingComponent = () => {
 }
 
 export default LoadingComponent;
+
+//no llegue a implementarlo

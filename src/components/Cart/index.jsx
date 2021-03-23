@@ -10,7 +10,7 @@ const CartComponent = () => {
             <div className="cart">
                 <h1>Carrito</h1>
                 {
-                    cart.length > 0 ?
+                    cart.length > 0 ? //si hay productos en el carrito muestro la info
 
                     <div className="cartContainer">
                         <div className="carritoTotal">
@@ -21,7 +21,8 @@ const CartComponent = () => {
                                     <p>Cantidad: {product.cantidad}</p>
                                     <p>Precio: ${product.item.price}</p>
                                     <p>Subtotal: ${product.item.price * product.cantidad}</p>
-                                    <button onClick={() => removeItem(product.item.id, product.cantidad, product.item.price * product.cantidad)}>X</button>
+                                    <button onClick={() => removeItem(product.item.id, product.cantidad,
+                                                            product.item.price * product.cantidad)}>X</button>
                                 </div>
                             )
                         })}
@@ -30,12 +31,13 @@ const CartComponent = () => {
                         <hr></hr>
                         <p><strong>Total: ${total}</strong></p>
                         <div className="buttons" >
-                            {cart.length > 0 && <button className="carrito_vacio" onClick={clearCart}>Vaciar carrito</button>}
-                        <Link to="/checkout" className="checkoutCart">Finalizar compra</Link>
+                            {cart.length > 0 &&
+                            <button className="carrito_vacio" onClick={clearCart}>Vaciar carrito</button>}
+                            <Link to="/checkout" className="checkoutCart">Finalizar compra</Link>
                         </div>
                         
                         </div>
-                    </div> :
+                    </div> : //si no hay productos va mensaje y boton de regresar al inicio
                     <>
                         <div className="carritoVacioMensaje">
                             <p>El carrito está vacío</p>

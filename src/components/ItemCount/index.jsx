@@ -6,22 +6,22 @@ import swal from "sweetalert";
 
 const ItemCountComponent = ({stock , initial , onAdd}) => {
     
-    const [contador, setContador] = useState(initial);
+    const [contador, setContador] = useState(initial); //contador 
     
 
     const onMinus = () => {
         if ( contador > 1) {
         setContador(contador - 1);
         }else{
-            swal("Elige al menos una unidad");
-        } 
+            swal("Elige al menos una unidad"); //aparece cuando se quiere hacer 0 el contador
+        }  
     }
 
     const onPlus = () => {
         if ( contador < stock) {
         setContador(contador + 1);
         }else{
-            swal("Upps!", "Stock no disponible");
+            swal("Upps!", "Stock no disponible"); //aparece si el contador es mayor al stock en la base de datos
         }
     }
     

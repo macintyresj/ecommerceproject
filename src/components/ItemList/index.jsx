@@ -2,7 +2,8 @@ import React from 'react';
 import Item from '../Item';
 import './itemlistStyles.scss';
 
-const ItemListComponent = ({items}) => {
+const ItemListComponent = ({items}) => { 
+    //Si existen items muestra los muestra con los values que se piden con el map  
 
     return (
         <>

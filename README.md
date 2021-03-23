@@ -3,9 +3,13 @@
 ## You can downnload or clone this repository 
 ## To run this proyect this dependencies were installed:
 
-npm modules									node-sass: 4.14.1
+npm modules									
 
-firebase: 8.0.2								sweetalert: 2.1.2
+node-sass: 4.14.1
+
+firebase: 8.0.2								
+
+sweetalert: 2.1.2
 
 react-router-dom: 5.2.0
 # Getting Started with Create React App
