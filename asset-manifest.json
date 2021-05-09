@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/macintyresj/ecommerceprojectTiendaSinNombre/static/css/main.c709fa52.chunk.css",
+    "main.js": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/main.2424df76.chunk.js",
+    "main.js.map": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/main.2424df76.chunk.js.map",
+    "runtime-main.js": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/runtime-main.0659b1d1.js",
+    "runtime-main.js.map": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/runtime-main.0659b1d1.js.map",
+    "static/js/2.0c378ef1.chunk.js": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/2.0c378ef1.chunk.js",
+    "static/js/2.0c378ef1.chunk.js.map": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/2.0c378ef1.chunk.js.map",
+    "static/js/3.2e17b78f.chunk.js": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/3.2e17b78f.chunk.js",
+    "static/js/3.2e17b78f.chunk.js.map": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/3.2e17b78f.chunk.js.map",
+    "index.html": "/macintyresj/ecommerceprojectTiendaSinNombre/index.html",
+    "static/css/main.c709fa52.chunk.css.map": "/macintyresj/ecommerceprojectTiendaSinNombre/static/css/main.c709fa52.chunk.css.map",
+    "static/js/2.0c378ef1.chunk.js.LICENSE.txt": "/macintyresj/ecommerceprojectTiendaSinNombre/static/js/2.0c378ef1.chunk.js.LICENSE.txt",
+    "static/media/navstyles.scss": "/macintyresj/ecommerceprojectTiendaSinNombre/static/media/fondo.9bb358ed.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0659b1d1.js",
+    "static/js/2.0c378ef1.chunk.js",
+    "static/css/main.c709fa52.chunk.css",
+    "static/js/main.2424df76.chunk.js"
+  ]
+}
